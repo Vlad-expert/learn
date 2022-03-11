@@ -1,0 +1,32 @@
+{% extends "dark/base.html" %}
+
+ {% block title %}
+    Главная
+ {% endblock %}   
+ 
+{% block content %}
+
+    <h4>Просмотр новости </h4>
+    <div class="stream-post borderwindow" style="height: auto;">
+        <div class="sp-author"> 
+            <a href="#" class="sp-author-avatar">
+                <img src="" alt="">
+            </a>
+            <h6 class="sp-author-name">
+                Автор <a href="#">{{detail.author}}</a>
+            </h6>
+        </div>
+        <div class="sp-content">
+            <div class="sp-info">{{ detail.date }}</div>
+        </div>
+        <div class="sp-content">
+            <p class="sp-paragraph mb-0">
+                <a href="">{{detail.title}}</a>
+            </p>
+        </div>
+
+        <div class="sp-content">
+            <div class="sp-info">{{ detail.text }}</div>           
+        </div>     
+    </div><br>
+{% endblock %}

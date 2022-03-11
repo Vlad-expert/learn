@@ -1,0 +1,55 @@
+
+{% extends "dark/index.html" %}
+
+
+ {% block title %}
+ {{ detail.name }}
+ {% endblock %}   
+ 
+{% block content %}
+
+    
+    <div class="stream-post" style="width: auto;">
+        <h5 class="title-color text-center">Информация о группе</h5>
+        <div class="sp-author"> 
+            <a href="#" class="sp-author-avatar">
+                <img src="" alt="">
+            </a>
+        </div>
+        <h4 class="title-color">Наименование</h4>
+        <div class="sp-content borderwindow">
+            <div class="sp-info" style="font-size: 27px;"><p>{{ detail.name }}</p></div>
+        </div>
+        <div class="sp-content">
+        
+        </div>
+        <h4 class="title-color">Описание</h4>
+        <div class="sp-content borderwindow">    
+            <p class="sp-paragraph mb-0">
+               {{detail.description}}
+            </p>
+        </div>
+        <br>
+        <h3 class="title-color">Альбомы</h3>
+        {% for el in albums %}
+        <div class="sp-content borderwindow">
+            <div class="sp-info"><a href="">{{ el.name }} ({{ el.create }})</a></div>           
+        </div>     
+        {% endfor %}
+        <br>
+        <h3 class="title-color">Треки</h3>
+        {% for el in tracks %}
+        <div class="sp-content borderwindow">
+            <div class="sp-info"><a href="">{{ el.name }} ({{ el.MusicAlbum }})</a></div>           
+        </div>     
+        {% endfor %}
+
+    </div><br>
+
+
+ {% endblock %}
+
+ {% block News %}
+
+{% endblock %}
+
